@@ -9,15 +9,17 @@ type Square struct {
 	a     uint
 }
 
-func (point Point) End() Point {
-	// implement me
-	return point
+func (square *Square) End() Point {
+	sideLength := int(square.a)
+	square.start.x = square.start.x + sideLength
+	square.start.x = square.start.x + sideLength
+	return square.start
 }
 
-func (square Square) Area() uint {
+func (square *Square) Area() uint {
 	return square.a * square.a
 }
 
-func (square Square) Perimeter() uint {
+func (square *Square) Perimeter() uint {
 	return square.a * 4
 }
