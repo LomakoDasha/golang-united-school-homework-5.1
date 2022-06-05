@@ -9,8 +9,9 @@ type Square struct {
 	a     uint
 }
 
-func (receiver) End() Point {
+func (point Point) End() Point {
 	// implement me
+	return point
 }
 
 func (square Square) Area() uint {
